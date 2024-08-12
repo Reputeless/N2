@@ -1,16 +1,18 @@
 ﻿#include <print>
-#include "MyLib/Common.hpp"
-//#include "MyLib/Utility.hpp"
-//#include "MyLib/Point.hpp"
-//#include "MyLib/FileSystem.hpp"
-//#include "MyLib/Timer.hpp"
-//#include "MyLib/BinaryFileWriter.hpp"
-//#include "MyLib/BinaryFileReader.hpp"
-//#include "MyLib/TextFileWriter.hpp"
-//#include "MyLib/TextFileReader.hpp"
-//#include "MyLib/Color.hpp"
-//#include "MyLib/Image.hpp"
-//#include "MyLib/BMP.hpp"
+#include "MyLib/Common.hpp" // - 13:50
+//#include "MyLib/Utility.hpp" // - 14:00
+//#include "MyLib/Point.hpp" // - 14:20
+//#include "MyLib/FileSystem.hpp" // - 14:30
+//#include "MyLib/Timer.hpp"// - 14:40
+// [14:40 - 14:55 break time]
+//#include "MyLib/BinaryFileWriter.hpp" // - 15:10
+//#include "MyLib/BinaryFileReader.hpp" // - 15:25
+//#include "MyLib/TextFileWriter.hpp" // - 15:40
+//#include "MyLib/TextFileReader.hpp" // - 15:55
+// [15:55 - 16:10 break time]
+//#include "MyLib/Color.hpp" // - 16:30
+//#include "MyLib/Image.hpp" // - 16:50
+//#include "MyLib/BMP.hpp" // - 17:10
 
 int main()
 {
