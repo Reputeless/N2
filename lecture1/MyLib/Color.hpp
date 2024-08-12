@@ -185,13 +185,13 @@ template<>
 struct std::formatter<seccamp::Color>
 {
 	template <class ParseContext>
-	constexpr ParseContext::iterator parse(ParseContext& ctx)
+	constexpr auto parse(ParseContext& ctx)
 	{
 		return ctx.begin();
 	}
 
-	template <class FmtContext>
-	FmtContext::iterator format(const seccamp::Color& c, FmtContext& ctx) const
+	template <class FormtContext>
+	auto format(const seccamp::Color& c, FormtContext& ctx) const
 	{
 		return std::format_to(ctx.out(), "({}, {}, {}, {})", c.r, c.g, c.b, c.a);
 	}

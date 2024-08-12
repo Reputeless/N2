@@ -307,13 +307,13 @@ template<>
 struct std::formatter<seccamp::Point>
 {
 	template <class ParseContext>
-	constexpr ParseContext::iterator parse(ParseContext& ctx)
+	constexpr auto parse(ParseContext& ctx)
 	{
 		return ctx.begin();
 	}
 
-	template <class FmtContext>
-	FmtContext::iterator format(const seccamp::Point& p, FmtContext& ctx) const
+	template <class FormtContext>
+	auto format(const seccamp::Point& p, FormtContext& ctx) const
 	{
 		return std::format_to(ctx.out(), "({}, {})", p.x, p.y);
 	}
