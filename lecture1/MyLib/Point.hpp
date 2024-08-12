@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <cmath> // std::sqrt
 #include <iostream> // std::ostream, std::istream
 #include <format> // std::formatter
 #include "Common.hpp"
