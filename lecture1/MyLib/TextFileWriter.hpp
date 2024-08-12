@@ -48,9 +48,9 @@ namespace seccamp
 		void writeln(std::string_view s);
 
 		/// @brief ファイルに文字列を書き込みます。
-		/// @tparam ...Types 書き込むデータの型
+		/// @tparam Types 書き込むデータの型
 		/// @param fmt 書式文字列
-		/// @param ...args 書き込むデータ
+		/// @param args 書き込むデータ
 		template <class... Types>
 		void write(std::format_string<Types...> fmt, Types&&... args)
 		{
@@ -58,9 +58,9 @@ namespace seccamp
 		}
 
 		/// @brief ファイルに文字列を書き込み、CRLF（\r\n）を追加します。
-		/// @tparam ...Types 書き込むデータの型
+		/// @tparam Types 書き込むデータの型
 		/// @param fmt 書式文字列
-		/// @param ...args 書き込むデータ
+		/// @param args 書き込むデータ
 		template <class... Types>
 		void writeln(std::format_string<Types...> fmt, Types&&... args)
 		{

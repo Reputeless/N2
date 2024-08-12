@@ -77,9 +77,9 @@ int main()
 
 	std::println("---- Point.hpp ----");
 	{
-		std::println("{}", Point{ 100, 200 } + Point{ 1, 2 });
-		std::println("{}", 2 * Point{ 100, 200 });
-		std::println("{}", Point{ 1, 2 } == Point{ 1, 2 });
+		std::cout << (Point{ 100, 200 } + Point{ 1, 2 }) << '\n';
+		std::cout << (2 * Point{ 100, 200 }) << '\n';
+		std::cout << (Point{ 1, 2 } == Point{ 1, 2 }) << '\n';
 	}
 
 	std::println("---- FileSystem.hpp ----");
@@ -140,7 +140,7 @@ int main()
 		reader.read(p);
 		std::println("a: {}", a);
 		std::println("b: {}", b);
-		std::println("p: {}", p);
+		std::cout << "p: " << p << '\n';
 	}
 
 	std::println("---- TextFileWriter.hpp ----");
@@ -170,15 +170,15 @@ int main()
 
 	std::println("---- Color.hpp ----");
 	{
-		std::println("{}", Color{ 255 });
-		std::println("{}", Color{ 0, 255, 0 });
-		std::println("{}", Color{ 0, 0, 255, 128 });
+		std::cout << Color{ 255 } <<'\n';
+		std::cout << Color{ 0, 255, 0 } << '\n';
+		std::cout << Color{ 0, 0, 255, 128 } << '\n';
 
-		std::println("{}", Color{ 11, 22, 33 }.grayscaleUint8());
-		std::println("{}", Color{ 11, 22, 33 }.grayscale());
+		std::cout << Color{ 11, 22, 33 }.grayscaleUint8() << '\n';
+		std::cout << Color{ 11, 22, 33 }.grayscale() << '\n';
 
-		std::println("{}", Palette::Black);
-		std::println("{}", Palette::White);
+		std::cout << Palette::Black << '\n';
+		std::cout << Palette::White << '\n';
 	}
 
 	std::println("---- Image.hpp & BMP.hpp ----");

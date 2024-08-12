@@ -54,7 +54,7 @@ namespace seccamp
 	#undef	SECCAMP_PLATFORM_PRIVATE_DEFINITION_WINDOWS
 	#define SECCAMP_PLATFORM_PRIVATE_DEFINITION_WINDOWS()	1
 
-#elif defined(__APPLE__)　// macOS, iOS
+#elif defined(__APPLE__) // macOS, iOS
 
 	#include <TargetConditionals.h> // TARGET_OS_IPHONE, TARGET_IPHONE_SIMULATOR, TARGET_OS_MAC
 
@@ -76,19 +76,19 @@ namespace seccamp
 
 	#endif
 
-#elif defined(__ANDROID__)　// Android
+#elif defined(__ANDROID__) // Android
 
 	#define SECCAMP_PLATFORM_NAME	"Android"
 	#undef  SECCAMP_PLATFORM_PRIVATE_DEFINITION_ANDROID
 	#define SECCAMP_PLATFORM_PRIVATE_DEFINITION_ANDROID()	1
 
-#elif defined(__linux__)　// Linux
+#elif defined(__linux__) // Linux
 
 	#define SECCAMP_PLATFORM_NAME	"Linux"
 	#undef  SECCAMP_PLATFORM_PRIVATE_DEFINITION_LINUX
 	#define SECCAMP_PLATFORM_PRIVATE_DEFINITION_LINUX()		1
 
-#elif defined(__EMSCRIPTEN__)　// Web
+#elif defined(__EMSCRIPTEN__) // Web
 
 	#define SECCAMP_PLATFORM_NAME	"Web"
 	#undef  SECCAMP_PLATFORM_PRIVATE_DEFINITION_WEB
