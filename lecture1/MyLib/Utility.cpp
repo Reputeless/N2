@@ -34,7 +34,7 @@ namespace seccamp
 		return result;
 	}
 
-	void Sleep(const int milliseconds)
+	void Sleep(const int32 milliseconds)
 	{
 		std::this_thread::sleep_for(std::chrono::milliseconds{ milliseconds });
 	}

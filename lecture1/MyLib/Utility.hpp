@@ -49,5 +49,5 @@ namespace seccamp
 
 	/// @brief 指定した時間（ミリ秒）スリープします。
 	/// @param milliseconds スリープする時間（ミリ秒）
-	void Sleep(int milliseconds);
+	void Sleep(int32 milliseconds);
 }

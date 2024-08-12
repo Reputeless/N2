@@ -71,8 +71,8 @@ int main()
 		std::println("IsEven(21): {}", IsEven(21));
 		std::println("IsOdd(20): {}", IsOdd(20));
 		std::println("IsOdd(21): {}", IsOdd(21));
-		std::println("ToUpper(\"Hello, seccamp!\"): {}", ToUpper("Hello, seccamp!"));
 		std::println("ToLower(\"Hello, seccamp!\"): {}", ToLower("Hello, seccamp!"));
+		std::println("ToUpper(\"Hello, seccamp!\"): {}", ToUpper("Hello, seccamp!"));
 	}
 
 	std::println("---- Point.hpp ----");
