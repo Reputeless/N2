@@ -40,14 +40,14 @@ namespace seccamp
 		/// @param color 画像の初期色
 		[[nodiscard]]
 		Image(std::integral auto width, std::integral auto height, const Color& color = Palette::White)
-			: Image(static_cast<int32>(width), static_cast<int32>(height), color) {}
+			: Image{ static_cast<int32>(width), static_cast<int32>(height), color } {}
 
 		/// @brief 画像を作成します。
 		/// @param size 画像の幅と高さ（ピクセル）
 		/// @param color 画像の初期色
 		[[nodiscard]]
 		Image(const Size& size, const Color& color = Palette::White)
-			: Image(size.x, size.y, color) {}
+			: Image{ size.x, size.y, color } {}
 
 		/// @brief ファイルからデータを読み込んで画像を作成します。
 		/// @param path 画像ファイルのパス
