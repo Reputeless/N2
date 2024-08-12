@@ -40,10 +40,12 @@ namespace seccamp
 			{
 				char c = '\0';
 
+				// もし 1 バイト読み込めなかった場合
 				if (m_binaryFileReader.read(&c, 1) == 0)
 				{
 					if (readBytes == 0)
 					{
+						// EOF
 						return false;
 					}
 					else
@@ -56,10 +58,12 @@ namespace seccamp
 
 				if (c == '\r')
 				{
+					// CR の場合は無視
 					continue;
 				}
 				else if (c == '\n')
 				{
+					// LF の場合は一行読み込み完了
 					break;
 				}
 

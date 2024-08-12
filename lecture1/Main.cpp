@@ -84,7 +84,6 @@ int main()
 
 	std::println("---- FileSystem.hpp ----");
 	{
-		std::println("FileSystem::FullPath(\"./\"): {}", FileSystem::FullPath("./"));
 		std::println("FileSystem::FullPath(\"test.txt\"): {}", FileSystem::FullPath("test.txt"));
 		std::println("FileSystem::Extension(\"test.txt\"): {}", FileSystem::Extension("test.txt"));
 		std::println("FileSystem::Extension(\"test\"): {}", FileSystem::Extension("test"));

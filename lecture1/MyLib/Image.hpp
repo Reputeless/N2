@@ -12,8 +12,13 @@ namespace seccamp
 	{
 	public:
 
+		/// @brief 使用する配列型
 		using container_type			= std::vector<Color>;
+		
+		/// @brief 要素を指すイテレータ型
 		using iterator					= container_type::iterator;
+
+		/// @brief 要素を指す const イテレータ型
 		using const_iterator			= container_type::const_iterator;
 
 		/// @brief デフォルトコンストラクタ
@@ -222,7 +227,7 @@ namespace seccamp
 
 	private:
 
-		std::vector<Color> m_pixels;
+		container_type m_pixels;
 
 		Size m_size{ 0, 0 };
 	};

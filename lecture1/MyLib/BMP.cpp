@@ -5,7 +5,7 @@
 
 namespace seccamp
 {
-// パディングを 2 バイトに強制する
+// クラスを 2 バイト境界にパックする
 #pragma pack(push, 2)
 
 	/// @brief Windows Bitmap ファイルのヘッダ
@@ -29,6 +29,11 @@ namespace seccamp
 		uint32 biClrUsed;
 		uint32 biClrImportant;
 
+		/// @brief BMP ヘッダを作成します。
+		/// @param width 画像の幅（ピクセル）
+		/// @param height 画像の高さ（ピクセル）
+		/// @param size_bytes 画像データのサイズ（バイト）
+		/// @return BMP ヘッダ
 		[[nodiscard]]
 		static constexpr BMPHeader Make(int32 width, int32 height, uint32 size_bytes) noexcept
 		{
@@ -57,6 +62,7 @@ namespace seccamp
 	// ヘッダのサイズが 54 バイトであることを確認
 	static_assert(sizeof(BMPHeader) == 54);
 
+// パッキングをデフォルトに戻す
 #pragma pack(pop)
 
     bool SaveBMP(const Image& image, const std::string_view path)

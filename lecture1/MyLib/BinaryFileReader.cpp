@@ -6,6 +6,9 @@ namespace seccamp
 {
 	namespace
 	{
+		/// @brief ファイルのサイズ（バイト）を取得します。
+		/// @param file ファイル
+		/// @return ファイルのサイズ（バイト）
 		[[nodiscard]]
 		static int64 GetFileSize(std::ifstream& file)
 		{
