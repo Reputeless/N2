@@ -55,13 +55,11 @@ namespace seccamp
 		m_pImpl->open(path);
 	}
 
-	[[nodiscard]]
 	bool TextFileWriter::isOpen() const noexcept
 	{
 		return m_pImpl->isOpen();
 	}
 
-	[[nodiscard]]
 	bool TextFileWriter::open(const std::string_view path)
 	{
 		return m_pImpl->open(path);
@@ -89,7 +87,6 @@ namespace seccamp
 		m_pImpl->write("\r\n");
 	}
 
-	[[nodiscard]]
 	const std::string& TextFileWriter::fullPath() const noexcept
 	{
 		return m_pImpl->fullPath();
