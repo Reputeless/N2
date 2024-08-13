@@ -59,7 +59,11 @@ namespace seccamp
 		/// @param rhs もう一方の画像データ
 		/// @return 2 つの画像が等しい場合 true, それ以外の場合は false
 		[[nodiscard]]
-		friend constexpr bool operator ==(const Image& lhs, const Image& rhs) noexcept = default;
+		friend bool operator ==(const Image& lhs, const Image& rhs) noexcept
+		{
+			// 画像の中身を比較する前に、画像のサイズを比較する
+			return ((lhs.m_size == rhs.m_size) && (lhs.m_pixels == rhs.m_pixels));
+		}
 
 		/// @brief 画像の幅（ピクセル）を返します。
 		/// @return 画像の幅（ピクセル）
