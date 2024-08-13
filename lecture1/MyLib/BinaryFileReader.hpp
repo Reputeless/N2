@@ -34,7 +34,6 @@ namespace seccamp
 		/// @brief ファイルをオープンします。すでにオープンされている場合はクローズしてから再オープンします。
 		/// @param path ファイルパス
 		/// @return オープンに成功した場合 true, それ以外の場合は false
-		[[nodiscard]]
 		bool open(std::string_view path);
 
 		/// @brief ファイルをクローズします。
