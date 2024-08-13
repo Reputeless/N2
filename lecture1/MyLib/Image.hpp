@@ -113,7 +113,8 @@ namespace seccamp
 		/// @param y 位置（行）
 		/// @remark image[y][x] で指定したピクセルにアクセスします。
 		/// @return 指定した行の先頭ポインタ
-		Color* operator [](size_t y)
+		[[nodiscard]]
+		Color* operator [](size_t y) noexcept
 		{
 			return (m_pixels.data() + (y * m_size.x));
 		}
@@ -122,7 +123,8 @@ namespace seccamp
 		/// @param y 位置（行）
 		/// @remark image[y][x] で指定したピクセルにアクセスします。
 		/// @return 指定した行の先頭ポインタ
-		const Color* operator [](size_t y) const
+		[[nodiscard]]
+		const Color* operator [](size_t y) const noexcept
 		{
 			return (m_pixels.data() + (y * m_size.x));
 		}
@@ -130,7 +132,7 @@ namespace seccamp
 		/// @brief 画像データの先頭ポインタを返します。
 		/// @return 画像データの先頭ポインタ
 		[[nodiscard]]
-		Color* data()
+		Color* data() noexcept
 		{
 			return m_pixels.data();
 		}
@@ -138,16 +140,16 @@ namespace seccamp
 		/// @brief 画像データの先頭ポインタを返します。
 		/// @return 画像データの先頭ポインタ
 		[[nodiscard]]
-		const Color* data() const
+		const Color* data() const noexcept
 		{
 			return m_pixels.data();
 		}
 
 		/// @brief 画像を空にします。
-		void clear()
+		void clear() noexcept
 		{
 			m_pixels.clear();
-			m_size.set(0, 0);
+			m_size.clear();
 		}
 
 		/// @brief 画像をリサイズします。
