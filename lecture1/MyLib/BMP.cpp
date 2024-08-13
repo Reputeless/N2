@@ -65,8 +65,8 @@ namespace seccamp
 // パッキングをデフォルトに戻す
 #pragma pack(pop)
 
-    bool SaveBMP(const Image& image, const std::string_view path)
-    {
+	bool SaveBMP(const Image& image, const std::string_view path)
+	{
 		if (image.isEmpty())
 		{
 			return false;
@@ -125,10 +125,10 @@ namespace seccamp
 		}
 
 		return true;
-    }
+	}
 
-    Image LoadBMP(const std::string_view path)
-    {
+	Image LoadBMP(const std::string_view path)
+	{
 		BinaryFileReader reader{ path };
 
 		if (not reader.isOpen())
@@ -198,6 +198,6 @@ namespace seccamp
 			pDstLine += lineStep;
 		}
 
-        return image;
-    }
+		return image;
+	}
 }
