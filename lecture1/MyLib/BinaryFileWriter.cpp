@@ -76,7 +76,6 @@ namespace seccamp
 		m_pImpl->open(path);
 	}
 
-	[[nodiscard]]
 	bool BinaryFileWriter::isOpen() const noexcept
 	{
 		return m_pImpl->isOpen();
@@ -87,7 +86,6 @@ namespace seccamp
 		return m_pImpl->isOpen();
 	}
 
-	[[nodiscard]]
 	bool BinaryFileWriter::open(const std::string_view path)
 	{
 		return m_pImpl->open(path);
@@ -98,7 +96,6 @@ namespace seccamp
 		m_pImpl->close();
 	}
 
-	[[nodiscard]]
 	const std::string& BinaryFileWriter::fullPath() const noexcept
 	{
 		return m_pImpl->fullPath();
