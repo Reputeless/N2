@@ -5,7 +5,7 @@
 namespace seccamp
 {
 	template <std::floating_point T>
-	struct Vector2
+	struct Vector2D
 	{
 		using value_type = T;
 
