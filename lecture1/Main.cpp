@@ -18,7 +18,7 @@ int main()
 {
 	std::println("---- Common.hpp ----");
 	{
-		std::println("Hello, seccamp!");
+		std::println("Hello, SecCamp!");
 		std::println("SECCAMPLIB_VERSION_MAJOR:  {}", SECCAMPLIB_VERSION_MAJOR);
 		std::println("SECCAMPLIB_VERSION_MINOR:  {}", SECCAMPLIB_VERSION_MINOR);
 		std::println("SECCAMPLIB_VERSION_REVISION:  {}", SECCAMPLIB_VERSION_REVISION);
@@ -71,15 +71,32 @@ int main()
 		std::println("IsEven(21): {}", IsEven(21));
 		std::println("IsOdd(20): {}", IsOdd(20));
 		std::println("IsOdd(21): {}", IsOdd(21));
-		std::println("ToLower(\"Hello, seccamp!\"): {}", ToLower("Hello, seccamp!"));
-		std::println("ToUpper(\"Hello, seccamp!\"): {}", ToUpper("Hello, seccamp!"));
+
+		static_assert(IsEven(20) == true);
+		//static_assert(IsEven(21) == true);
+
+		static_assert(InRange(10, 0, 20) == true);
+		static_assert(InRange(40, 0, 20) == false);
+
+		std::println("ToLower(\"Hello, SecCamp!\"): {}", ToLower("Hello, SecCamp!"));
+		std::println("ToUpper(\"Hello, SecCamp!\"): {}", ToUpper("Hello, SecCamp!"));
 	}
 
 	std::println("---- Point.hpp ----");
 	{
-		std::println("{}", Point{ 100, 200 } + Point{ 1, 2 });
-		std::println("{}", 2 * Point{ 100, 200 });
-		std::println("{}", Point{ 1, 2 } == Point{ 1, 2 });
+		const Point p1{ 100, 200 };
+		const Point p2{ 1, 2 };
+
+		std::println("{}", p1 + p2);
+		std::println("{}", 2 * p1);
+		std::println("{}", p1 == p1);
+		std::println("{}", p1 != p2);
+
+		std::println("{}", Point{ 100, 200 }.length());
+		std::println("{}", Point{ 100, 200 }.length<float>());
+
+		const Point p3 = Point::Zero();
+		std::println("{}", p3);
 	}
 
 	std::println("---- FileSystem.hpp ----");
@@ -163,7 +180,7 @@ int main()
 		std::string line;
 		while (reader.readLine(line))
 		{
-			std::println("{}", line);
+			std::println("> {}", line);
 		}
 	}
 
@@ -210,15 +227,15 @@ int main()
 			image.save("image2.bmp");
 		}
 
-		{
-			Image image{ "seccamp.bmp" };
+		//{
+		//	Image image{ "seccamp.bmp" };
 
-			for (auto& pixel : image)
-			{
-				pixel = Color{ pixel.grayscaleUint8() };
-			}
+		//	for (auto& pixel : image)
+		//	{
+		//		pixel = Color{ pixel.grayscaleUint8() };
+		//	}
 
-			image.save("seccamp_gray.bmp");
-		}
+		//	image.save("seccamp_gray.bmp");
+		//}
 	}
 }
